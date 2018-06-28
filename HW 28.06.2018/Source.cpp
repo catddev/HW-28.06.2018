@@ -121,23 +121,27 @@ start:
 	break;
 	case 10:
 	{
-		int n = 9, m = 9;
-		for (int i = 0; i < n; i++)
+		int height = 0;
+
+		cout << "Введите высоту  равнобедренного треугольника: ";
+		cin >> height;
+
+		for (int i = 0; i < height; i++)
 		{
-			for (int i = 0; i < m; i++)
+			for (int j = 1; j < height - i; j++)
 			{
-
-				for (int j = 0; j < n; j++)
-				{
-					if (i >= j && (i + j >= n - 1)) cout << "*";
-					else cout << " ";
-
-					if (i <= j && (i + j <= m - 1)) cout << "*";
-					else cout << " ";
-				}
-				cout << endl;
+				cout << ' ';
 			}
+
+			for (int j = height - 2 * i; j <= height; j++)
+			{
+				cout << '*';
+			}
+			cout << endl;
 		}
+
+
+	
 	}
 	break;
 	case 7:
