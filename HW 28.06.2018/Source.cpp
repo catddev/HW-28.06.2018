@@ -119,36 +119,44 @@ start:
 		cout << endl;
 	}
 	break;
-	case 10:
+	case 7:
 	{
-		int height = 0;
+		// Вывести на экран ромб из зведочек
 
-		cout << "Введите высоту  равнобедренного треугольника: ";
-		cin >> height;
 
-		for (int i = 0; i < height; i++)
+		int v;
+		cout << "Введите параметр ромба (половину диагонали):" << endl;
+		cin >> v;
+
+		for (int i = 0; i < v; i++)
 		{
-			for (int j = 1; j < height - i; j++)
+			for (int j = 0; j < v - i; j++)
 			{
 				cout << ' ';
 			}
 
-			for (int j = height - 2 * i; j <= height; j++)
+			for (int j = v - 2 * i; j <= v; j++)
+			{
+				cout << '*';
+			}
+			cout << endl;
+		}
+		for (int i = v; i >= 0; i--)
+		{
+			for (int j = 0; j < v - i; j++)
+			{
+				cout << ' ';
+			}
+
+			for (int j = v - 2 * i; j <= v; j++)
 			{
 				cout << '*';
 			}
 			cout << endl;
 		}
 
-
-	
-	}
-	break;
-	case 7:
-	{
-		// Вывести на экран ромб из зведочек
-
-		int n = 9;
+		// вариант из аналогичных построений
+		/*int n = 9;
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < n; j++)
@@ -167,7 +175,7 @@ start:
 				else cout << " ";
 			}
 			cout << endl;
-		}
+		}*/
 
 	}
 	break;
